@@ -54,3 +54,5 @@ git show stash@{1} -> para ver el contenido de un stash
 git stash apply stash@{1} -> para aplicar al working dir el stash concreto
 
 git stash clear -> para limpiar todos los stash
+
+*****PLACEHOLDER*******
