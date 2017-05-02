@@ -1,0 +1,56 @@
+****PUSH, PULL Y OTRAS HIERBAS****
+
+git pull <remote> <branch> -> Descarga los cambios y aplica merge automaticamente al HEAD, notificando de errores
+	git pull --rebase -> Mejora ya que primero descarga todo y despues intenta aplicar los cambios locales
+
+git fetch <remote> -> Descargar los cambios, pero no integrarlos en HEAD
+
+git push <remote> <branch> -> publicar los cambios a remoto
+
+git push remote <commitHash>:<branch> -> push specific commit to branch in remote
+
+git status -> ver estado del repositorio local
+
+git checkout <commit hash> -> esto nos hara un checkout a ese commit. WARNING: esto nos hace salirnos de la branch en la que estamos. Como bien nos dicen
+	en el warning, estamos en un estado fuera de cualquier rama. Podemos hacer commits y cambios y despues descartarlos sin afectar a otras ramas, o podemos mantener estos cambios haciendo un rama nueva
+	
+****BRANCHES****
+
+git checkout -b "Experimental branch for an specific checkout"
+
+git push <remote-name> <local-branch-name>:<remote-branch-name> -> Crear una rama remota y subirla
+
+****DIFFS AND CHANGES****
+
+git diff -> Ver las diferencias
+	git diff [file] -> ver solo las de un fichero
+	
+git log origin/master..HEAD -> ver el log pendiente de hacer push a remoto origin
+
+git diff origin/master..HEAD -> ver las diferencias entre local y remoto
+
+git diff --cached -> ver cambios entre stage y repository
+
+git master origin/master -> muestra las diferencias entre el repositorio local y el remote, indicando los cambios mirando desde remote. Es decir, si un cambio es añadir lineas de codigo, aparecera en rojo indicando que eso falta en remote
+
+git show --format=medium 8b12 -> muestra el contenido en este caso del objeto "8b12" que son los 4 primeros digitos de un commit
+	El formato nos ayuda mostrar más o menos informacion. En este caso "medium" es porque poner quien y cuando
+
+****TRACK FILES****
+
+git add . -> añadir todos los cambios para commit, incluso de los files no trackeados
+	git add filename -> solo añade para commit los cambios de files trackeados
+	
+git rm --cached CheatSheet.txt -> para quitarlo de los archivos trackeados para hacer commit
+
+****STASH****
+
+git stash -> sirve para guardar cambios en un temporal y sacarlos de la lista de cambios pendientes para añadir a un commit. Esto no vale para poder hacer rebases de otros commits sin tener que hacer un commit para los cambios que tengamos en el working directory
+
+git stash list -> para ver la lista de stash
+
+git show stash@{1} -> para ver el contenido de un stash
+
+git stash apply stash@{1} -> para aplicar al working dir el stash concreto
+
+git stash clear -> para limpiar todos los stash
