@@ -15,7 +15,17 @@ https://gitirc.eu/git-show.html
 
 Change default editor git windows
 http://stackoverflow.com/questions/10564/how-can-i-set-up-an-editor-to-work-with-git-on-windows
+http://stackoverflow.com/questions/4957630/how-do-you-merge-in-git-on-windows
+
 
 Stash changes
 https://git-scm.com/book/en/v1/Git-Tools-Stashing
 https://git-scm.com/docs/git-stash
+
+
+*****************************************
+NOTAS MERGES
+
+- No podemos hacer stash apply si tenemos cambios sin añadir -> sin git add filename
+	- Despues podemos añadir pero tenemos que resolver los conflictos
+	- DespueS de resolverlos, recordar que ya lo tenemos todo en el Stage porque previamente tuvimos que hacer un "add"
