@@ -6,7 +6,9 @@ https://help.github.com/articles/adding-an-existing-project-to-github-using-the-
 
 Create a gitignore file
 https://help.github.com/articles/ignoring-files/
-https://help.github.com/articles/ignoring-files/
 
 Reset, checkout and Revert
 https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting
+
+Git Show
+https://gitirc.eu/git-show.html
