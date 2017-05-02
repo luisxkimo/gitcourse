@@ -29,3 +29,8 @@ NOTAS MERGES
 - No podemos hacer stash apply si tenemos cambios sin añadir -> sin git add filename
 	- Despues podemos añadir pero tenemos que resolver los conflictos
 	- DespueS de resolverlos, recordar que ya lo tenemos todo en el Stage porque previamente tuvimos que hacer un "add"
+	
+- Para hacer un merge desde remoto:
+	- Podemos hacerlo con git pull --rebase -> Esto aplicara nuestros cambios locales al final y deberia de darnos la opcion de arrancar la mergetool para
+		resolver los conflictos
+	
