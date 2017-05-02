@@ -12,3 +12,10 @@ https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting
 
 Git Show
 https://gitirc.eu/git-show.html
+
+Change default editor git windows
+http://stackoverflow.com/questions/10564/how-can-i-set-up-an-editor-to-work-with-git-on-windows
+
+Stash changes
+https://git-scm.com/book/en/v1/Git-Tools-Stashing
+https://git-scm.com/docs/git-stash
