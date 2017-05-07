@@ -20,6 +20,12 @@ git checkout -b "Experimental branch for an specific checkout"
 
 git push <remote-name> <local-branch-name>:<remote-branch-name> -> Crear una rama remota y subirla
 
+git show-branch --all  --> ver todas las ramas
+
+git show-branch --all  --> ver todas las ramas. También hay otra forma de listar las ramas remotas utilizando los comandos git remote y git ls-remote. El primero muestra bastante información sobre el respositorio remoto y cómo se relaciona con tu propio repositorio, mientras que el segundo comando simplemente lista todas las referencias a ramas y tags que conoce.
+
+git diff mybranch..master -- myfile.cs --> Comparando un fichero entre ramas
+
 ****DIFFS AND CHANGES****
 
 git diff -> Ver las diferencias
@@ -56,5 +62,3 @@ git stash apply stash@{1} -> para aplicar al working dir el stash concreto
 git stash clear -> para limpiar todos los stash
 
 *****PLACEHOLDER*******
-
-- veremos que merge gana en este caso
