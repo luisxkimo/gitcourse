@@ -22,6 +22,9 @@ Stash changes
 https://git-scm.com/book/en/v1/Git-Tools-Stashing
 https://git-scm.com/docs/git-stash
 
+DETACHED HEAD
+
+https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit
 
 *****************************************
 NOTAS MERGES
