@@ -56,3 +56,5 @@ git stash apply stash@{1} -> para aplicar al working dir el stash concreto
 git stash clear -> para limpiar todos los stash
 
 *****PLACEHOLDER*******
+
+-- probando de nuevo los merge
