@@ -1,6 +1,20 @@
 Registro Gitswarn
 5907853ca8e67@mailbox92.biz
 
+-GIT FUSION:
+root pass: root
+p4 pass= Abc-1234
+git = Abc-1234
+GENERATED SERVER ID: GF-IrZp7j
+ssl:192.168.1.40:5480
+
+
+- HELIX
+root: root
+ssl:192.168.1.39:1666
+super: Abc-1234
+
+
 Add local repository to remote GitHub
 https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
 
