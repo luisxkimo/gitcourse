@@ -1,0 +1,15 @@
+KENNY
+
+-INTRO-
+
+Git guarda log de cambios, no copias de los ficheros. Excepto para los los binarios, que como no puede comparar cambios, sí que guarda una copia cada vez que hay un cambio.
+
+Forma de manejar las ramas: 
+
+	- TFS: guarda una copia de todo el repositorio
+	- GIT: crea un puntero sobre un commit
+	
+HEAD -> Indica donde estamos actualmente y que estamos cambiando en ese momento
+
+Copia de los commit del remoto en local, se les renombre con "origin"
+
