@@ -14,6 +14,7 @@ git status -> ver estado del repositorio local
 git checkout <commit hash> -> esto nos hara un checkout a ese commit. WARNING: esto nos hace salirnos de la branch en la que estamos. Como bien nos dicen
 	en el warning, estamos en un estado fuera de cualquier rama. Podemos hacer commits y cambios y despues descartarlos sin afectar a otras ramas, o podemos mantener estos cambios haciendo un rama nueva
 	
+git checkout -b rama -> Crea la rama "rama" y hace checkout a ella
 ****BRANCHES****
 
 git checkout -b "Experimental branch for an specific checkout"
@@ -61,4 +62,12 @@ git stash apply stash@{1} -> para aplicar al working dir el stash concreto
 
 git stash clear -> para limpiar todos los stash
 
-*****PLACEHOLDER*******
+***COMMIT****
+
+git commit -amend -> nos abre el notepad para cambiar el mensaje del ultimo commit
+
+*****NOMENCLATURA*******
+
+git checkout HEAD~4 -> volvemos al 4 commit anterior
+
+git checkout HEAD^ -> nos movemos 1 hacia atras

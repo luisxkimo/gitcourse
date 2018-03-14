@@ -1,0 +1,94 @@
+KENNY
+
+-INTRO-
+
+Git guarda log de cambios, no copias de los ficheros. Excepto para los los binarios, que como no puede comparar cambios, sí que guarda una copia cada vez que hay un cambio.
+
+Forma de manejar las ramas: 
+
+	- TFS: guarda una copia de todo el repositorio
+	- GIT: crea un puntero sobre un commit
+	
+HEAD -> Indica donde estamos actualmente y que estamos cambiando en ese momento
+
+Copia de los commit del remoto en local, se les renombre con "origin"
+
+TOOLS
+
+No recomendado WinMerge
+
+
+UnSTAGE / STAGE
+
+- Para pasar a stage -> git add
+
+- Untracked -> no está en el repositorio.
+- Unstage -> no está commiteado
+
+CHECKOUT/DETACHED
+
+- HEAD esta detached de las ramas
+	- Cuando hacemos commit, el HEAD se mueve, pero no afecta a ninguna rama. Es un puntero al ultimo commit
+
+git checkout master -> se attacha a la rama master. Todos los commit que hagamos se reflejaran directamente en la rama master
+
+git branch -f master C4-> movemos la master al commit C4. No hace falta estar con HEAD en la rama origen
+
+AMMEND
+
+git commit --amend
+
+	- Para rehacer el commit anterior, tanto para cambiar nombre, o añadir fichero o quitar, etc...
+	- No se puede hacer ammend de un commit ya hecho, hay que hacer una hoja
+	
+Si por ejemplo se nos olvida un fichero, primero hacemos el add del fichero, o del cambio en uno ya existente, y luego hacemos git commit --amend, y guardamos, y ya automaticamente se arregla el commit anterior
+
+Los commits hechos con ammend siguen por ahí, en un estado no valido. Cuando borramos un commit, en realidad no se borra, se hace deteach. Podriamos incluso recuperarlo
+	
+RESET
+
+--hard : elimina el commit y todo lo que contiene. Pero recordar que el commit está por ahi y se podria recuperar
+--mixed: elimina el commit, pero mantiene los cambios "en rojo" (untracked o unstage). El de por defecto del reset
+--soft: igual que el mixed, pero deja los cambios "en verde"
+
+REVERT
+
+Lo que hace es, si tenemos C3->C4, y hacemos revert a C3, nos crea un commit nuevo C3', con el estado de C3, listo para hacer commit y resetear, y nos quedaria esto
+
+C3->C4->C3'
+
+STASH
+
+Sirve para guardar cambios de codigo, por ejemplo para cuando estamos en un rama, y tenemos cambios pendientes, si queremos movernos a otra rama, no nos va a dejar. Lo metemos en el stash y entonces ya nos podemos mover, y posteriormente en la rama destino aplicar el stash
+
+MERGE
+
+git merge master2 -> si master2 nacia de master, al no haber cambios, lo que hara será mover master a master2
+	- Seria el movimiento logico de una rama de feature y la queremos llevar a la troncal
+	
+REBASE
+
+El rebase entre ramas hace que, se posiciona en la rama origen, coge la rama remota los commits, y los pone delante de la rama en la que estamos. Hemos mergeado los cambios, pero es una operacion destructiva, es decir, que deja commits sueltos.
+
+Una vez colocado en el orgien, por cada commit que vaya a ir metiendo, si hay conflictos nos lo va decir, y vamos a tener que ir resolviendolos y haciendo rebase-continue para ir cerrandolos
+
+Esto esta recomendado más para cuando mexclamos ramas a local, que nos da igual que se quede un poco sucia con commits
+
+CHERRYPICK
+
+Podemos crear una rama cogiendo los commit que queramos
+
+git checkout cherryRama
+git cherry-pick C4 C3 C6
+	
+	Ejemplo: estas en master, quieres hacer bugfix, pero te equivocas y haces el commit en master en vez de en tu rama.
+		1. Haces reset de master
+		2. Creas la rama del bugfix
+		3. Haces el cherry-pick del commit que hiciste en master
+		
+Esto genera commits sin usar. Otra manera para evitar esto:
+
+	1. Ya hemos hecho el commit mal en master
+	2. Creamos ahora la rama desde donde estamos
+	3. Movemos el puntero de master atras: git branch -f master C4
+	
