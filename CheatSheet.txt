@@ -2,9 +2,11 @@
 
 git pull <remote> <branch> -> Descarga los cambios y aplica merge automaticamente al HEAD, notificando de errores
 	git pull --rebase -> Mejora ya que primero descarga todo y despues intenta aplicar los cambios locales
-
+		- Podemos prescindir de ella utilizando fetch y merge o fetch y rebase
+		
 git fetch <remote> -> Descargar los cambios, pero no integrarlos en HEAD
-
+	Fetch pone en sincronia el origin local con el origin remoto
+	
 git push <remote> <branch> -> publicar los cambios a remoto
 
 git push remote <commitHash>:<branch> -> push specific commit to branch in remote
