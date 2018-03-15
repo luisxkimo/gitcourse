@@ -46,5 +46,8 @@ Bugs en PROD?
 	- Se integra en develop
 	- Se deploya en PRE
 	
+PULL REQUEST
 
-	
+Dev local -> creamos rama para feature1 -> Terminamos y hacemos push de la rama a remoto. NO INTEGRAMOS A DEV LOCAL
+	- Esto desencadena un pull request para revisar esta rama.
+	- Despues SI ES ACEPTADA, podemos luego hacer un fetech y ya integramos en dev local
