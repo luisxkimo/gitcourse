@@ -64,4 +64,22 @@ CONFLICTO EN MERGE PULL REQUEST
 ESTADOS CRITICOS
 
 	- Eliminar commit merge: no se puede hacer con revert, hace falta rebase
+
+SUBMODULOS
+
+	- para hacer fetch desde el padre si queremos actualizar el modulo, tenemos que cambiarnos a la carpeta del submodulo dentro del padre y hacer fetch
+	- Para actualizar un proyecto separado, el codigo de su submodulo
+		1 - Primero fetch del padre, normal
+		2- Luego: git submodules update
+	- git clone --recurse-submodules : para ir bajandose el repositorio y todos sus submodulos
+	
+GIT LFS
+
+	- Servidor para almacenamiento de ficheros binarios
+	- Lo que tenemos en nuestro repositorio de git es un enlace al LFS. No una copia de este
+
+	1- git lfs install
+	2- git lfs track '*.png'
+	3- git add .gitattributes
+	4- ya podemos ver con git lfs status que arhchivos van a git y cuales a LFS
 	
