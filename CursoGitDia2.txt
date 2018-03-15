@@ -1,0 +1,50 @@
+.GITIGNORE
+
+git add -f -> fuerzas a añadirlo aunque en el gitignore ponga que lo ignora
+
+
+.git
+
+- Nuestro repositorio local de git
+- hooks
+	- Scripts que agregamos para cosas por ejemplo: cuando hagas un pull, hazme un fetch. O si hago checkout de una rama remota que no tengo en loca, primero creamela en local
+
+.git/object/pack -> el tamaño del arhivo .pack nos dice el tamaño de nuestro repositorio
+
+.git/object  -> carpetas de cache que va creando cada vez que navegamos por el arbol del repositorio
+
+.gitattributes
+	- Donde los plugins de git guardan referencias y configuraciones
+
+.gitmodules
+	- Indica si tenemos submodulos en nuestro repositorio
+	- Son enlaces a otro repositorio
+
+	
+POLITICAS DE RAMAS
+
+2 ramas troncales:
+	- develop: sobre la que vamos desarrollando nuevas features
+	- master: app completa desplegada y terminada
+	
+Nuevas features?
+	- Sacamos rama de develop
+	- la terminamos y la devolvemos a develop
+
+Cuando tenemos suficiente funcionalidad para sacar version nueva?
+	- Sacamos rama de develop con nombre "release xxx"
+	- Se trabaja en esa rama con QA para refinar
+	- Despues de refinar del todo, se mergea a master y se taguea
+	
+	- Normalment lo que vamos integrando a master y tagueando nuevo, se va deployando a PRE
+	- Despues cuando este probado en PRE, podemos hacer un swap de los entornos
+
+Bugs en PROD?
+
+	- Sacamos rama de master para el hotfix
+	- se resuelve y se integra a master y se taguea
+	- Se integra en develop
+	- Se deploya en PRE
+	
+
+	
