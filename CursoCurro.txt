@@ -25,7 +25,7 @@ UnSTAGE / STAGE
 - Untracked -> no está en el repositorio.
 - Unstage -> no está commiteado
 
-CHECKOUT/DETACHED
+CHECKOUT/DETACHED/BRANCH
 
 - HEAD esta detached de las ramas
 	- Cuando hacemos commit, el HEAD se mueve, pero no afecta a ninguna rama. Es un puntero al ultimo commit
@@ -33,6 +33,7 @@ CHECKOUT/DETACHED
 git checkout master -> se attacha a la rama master. Todos los commit que hagamos se reflejaran directamente en la rama master
 
 git branch -f master C4-> movemos la master al commit C4. No hace falta estar con HEAD en la rama origen
+				CON ESTO PODEMOS MOVER LAS RAMAS A LOS COMMIT QUE QUERAMOS
 
 AMMEND
 
