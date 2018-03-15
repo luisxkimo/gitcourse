@@ -51,3 +51,11 @@ PULL REQUEST
 Dev local -> creamos rama para feature1 -> Terminamos y hacemos push de la rama a remoto. NO INTEGRAMOS A DEV LOCAL
 	- Esto desencadena un pull request para revisar esta rama.
 	- Despues SI ES ACEPTADA, podemos luego hacer un fetech y ya integramos en dev local
+	
+CONFLICTO EN MERGE PULL REQUEST
+
+	- Fetch en master local
+	- Cambiar a la rama de nuestr feature1
+	- rebase para resolver los conflictos y continue
+	- amend para poner nuevo titulo
+	- git push origin Rama -f
