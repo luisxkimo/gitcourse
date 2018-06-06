@@ -73,3 +73,8 @@ git commit -amend -> nos abre el notepad para cambiar el mensaje del ultimo comm
 git checkout HEAD~4 -> volvemos al 4 commit anterior
 
 git checkout HEAD^ -> nos movemos 1 hacia atras
+
+*****RESET AND REVER*******
+
+git reset --hard # removes staged and working directory changes
+git clean -f -d # remove untracked
